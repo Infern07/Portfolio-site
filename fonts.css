@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('/Plus_Jakarta_Sans/PlusJakartaSans-Regular.woff2') format('woff2'),
+         url('/Plus_Jakarta_Sans/PlusJakartaSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
