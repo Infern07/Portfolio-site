@@ -1,326 +1,494 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
-<head>
-    <link rel="icon" href="./images/J.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="icon" href="./images/J.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <script src="https://unpkg.com/split-type"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-</head>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-<body class="overflow-x-hidden bg-black font-plus-jakarta">
-
+  <body class="overflow-x-hidden font-plus-jakarta dark-mode">
     <nav class="w-full fixed px-5 py-4 flex mx-24 justify-center z-50">
-        <div class="flex items-center justify-between w-full">
-            <h2 class="font-bold px-4 text-2xl text-white cursor-pointer"><a href="#top">JayP007</a></h2>
-            <ul
-                class="hidden md:flex items-center border gap-12 rounded-full px-12 py-3 backdrop-blur-md text-white shadow-sm bg-opacity-50">
-                <li><a href="#top">Home</a></li>
-                <li><a href="#About Me">About Me</a></li>
-                <li><a href="#Education">Education</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-            <div class="flex items-center gap-4">
-                <button onclick="toggleTheme">
-                    <img src="./images/sun_icon.png" alt="" class="w-6">
-                </button>
-                <a href="./images/Resume.pdf" download
-                    class="hidden lg:flex items-center gap-3 px-6 backdrop-blur-md py-2.5 border text-white border-gray-500 rounded-full ml-4">
-                    <h3>Resume</h3> <span class="w-6 text-[#F8f8f8]"><img src="./icons8-download-64.png"></span>
-                </a>
-                <button class="block md:hidden ml-3" onclick="openMenu()">
-                    <img src="./images/menu-black.png" alt="" class="w-6">
-                </button>
-            </div>
-
-            <div>
-                <!--mobile menu-->
-                <ul id="sidemenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed
-             -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blend-multiply transition duration-500">
-                    <div class="absolute right-6 top-6" onclick="closeMenu()">
-                        <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer">
-                    </div>
-                    <li><a href="#top" onclick="closeMenu()">Home</a></li>
-                    <li><a href="#About Me" onclick="closeMenu()">About Me</a></li>
-                    <li><a href="#Education" onclick="closeMenu()">Education</a></li>
-                    <li><a href="#Skills" onclick="closeMenu()">Skills</a></li>
-                    <li><a href="#Contact" onclick="closeMenu()">Contact</a></li>
-                </ul>
-            </div>
-
+      <div class="flex items-center justify-between w-full">
+        <h2 class="font-bold px-4 text-2xl text-white cursor-pointer">
+          <a href="#top">JayP007</a>
+        </h2>
+        <ul
+          class="hidden md:flex items-center border gap-12 rounded-full px-12 py-3 backdrop-blur-md text-white shadow-sm bg-opacity-50"
+        >
+          <li><a href="#top">Home</a></li>
+          <li><a href="#About Me">About Me</a></li>
+          <li><a href="#Education">Education</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+          <div class="mode-toggle" onclick="toggleMode()">
+            <i id="mode-icon" class="fas fa-moon"></i>
+          </div>
+          <a
+            href="./images/Resume.pdf"
+            download
+            class="hidden lg:flex items-center gap-3 px-6 backdrop-blur-md py-2.5 border text-white border-gray-500 rounded-full ml-4"
+          >
+            <h3>Resume</h3>
+            <span class="w-6 text-[#F8f8f8]"
+              ><img src="./icons8-download-64.png"
+            /></span>
+          </a>
+          <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="./images/menu-black.png" alt="" class="w-6" />
+          </button>
         </div>
+
+        <div>
+          <!--mobile menu-->
+          <ul
+            id="sidemenu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blend-multiply transition duration-500"
+          >
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+              <img
+                src="./images/close-black.png"
+                alt=""
+                class="w-5 cursor-pointer"
+              />
+            </div>
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#About Me" onclick="closeMenu()">About Me</a></li>
+            <li><a href="#Education" onclick="closeMenu()">Education</a></li>
+            <li><a href="#Skills" onclick="closeMenu()">Skills</a></li>
+            <li><a href="#Contact" onclick="closeMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!--header section-->
-    <div class="w-full h-screen flex items-center px-12 font-plus-jakarta ">
+    <div class="w-full h-screen flex items-center px-12 font-plus-jakarta">
+      <div class="flex flex-col gap-24 fixed">
+        <a href="https://www.linkedin.com/in/jay-pandya9904/" target="_blank"
+          ><i class="fa-brands fa-linkedin text-[#F8F8F8] fa-2xl"></i
+        ></a>
+        <a href="https://x.com/JP_0017" target="_blank">
+          <i class="fa-brands fa-square-x-twitter text-[#F8F8F8] fa-2xl"></i
+        ></a>
+        <a href="https://github.com/Infern07" target="_blank"
+          ><i class="fa-brands fa-github text-[#F8F8F8] fa-2xl"></i
+        ></a>
+      </div>
 
-        <div class="flex flex-col gap-24 fixed">
-            <a href="https://www.linkedin.com/in/jay-pandya9904/" target="_blank"><i class="fa-brands fa-linkedin text-[#F8F8F8] fa-2xl"></i></a>
-            <a href="https://x.com/JP_0017" target="_blank"> <i class="fa-brands fa-square-x-twitter text-[#F8F8F8] fa-2xl"></i></a>
-            <a href="https://github.com/Infern07" target="_blank"><i class="fa-brands fa-github text-[#F8F8F8] fa-2xl"></i></a>
-            <a href="https://www.instagram.com/jaypandya9904/" target="_blank"><i class="fa-brands fa-instagram text-[#F8F8F8] fa-2xl"></i></a>
+      <div class="w-full h-screen flex items-center justify-evenly">
+        <div class="flex flex-col border-spacing-4 gap-4">
+          <h1
+            class="text-3xl sm:text-6xl lg:text-[66px] text-white mb-12 font-plus-jakarta font-semibold"
+          >
+            <span class="text-[#12D861]">Hello!</span> I'm Jay<br />
+            <h1 class="ml5 -mt-12 text-white p-2 text-6xl">
+              <span class="text-wrapper">
+                <span class="line line1 text-white"></span>
+                <span class="letters letters-left text-white">Web</span>
+                <span class="letters letters-right text-white">Designer</span>
+                <span class="line line2"></span>
+              </span>
+            </h1>
+            <span class="text-white font-semibold text-6xl"
+              >Based in India.</span
+            >
+          </h1>
+          <a href="mailto:jaypandya428@gmail.com"
+            ><div
+              class="rounded-md w-fit mt-4 px-6 py-3 bg-gradient-to-r from-[#3c3b3b] to-[#1E1E1E] text-white flex items-center gap-2 drop-shadow-sm cursor-pointer"
+            >
+              <label class="cursor-pointer">Contact Me </label>
+              <img
+                src="./images/right-arrow-white.png"
+                alt="arrow-image"
+                class="w-4"
+              />
+            </div>
+          </a>
         </div>
 
-        <div class="w-full h-screen flex items-center justify-evenly ">   
-            <div class="flex flex-col border-spacing-4 gap-4">
-                <h1 class="text-3xl sm:text-6xl lg:text-[66px] text-white mb-12 font-plus-jakarta font-semibold"><span class="text-[#12D861]">Hello!</span>
-                    I'm Jay<br>
-                    <h1 class="ml5 -mt-12 text-white p-2 text-6xl">
-                        <span class="text-wrapper">
-                            <span class="line line1 text-white"></span>
-                            <span class="letters letters-left text-white">Web</span>
-                            <span class="letters letters-right text-white">Designer</span>
-                            <span class="line line2"></span>
-                        </span>
-                    </h1>
-                    <span class="text-white font-semibold text-6xl">Based in India.</span>
-                </h1>
-                <a href="mailto:jaypandya428@gmail.com"><div class="rounded-md w-fit mt-4 px-6 py-3 bg-gradient-to-r from-[#3c3b3b] to-[#1E1E1E] text-white flex
-                    items-center gap-2 drop-shadow-sm cursor-pointer">
-                    <label class="cursor-pointer">Contact Me </label>
-                    <img src="./images/right-arrow-white.png" alt="arrow-image" class="w-4">
-                </div>
-                </a>
-            </div>
-
-            <div class="flex-col border border-gray-600 p-2 rounded-xl">
-                <img src="./images/jaypfp.jpg" alt="" class="rounded-md">
-                <h6 class="flex items-center gap-2 text-md text-white">Jayp.png 👋</h6>
-            </div>
+        <div class="flex-col border border-gray-600 p-2 rounded-xl">
+          <img src="./images/jaypfp.jpg" alt="" class="rounded-md" />
+          <h6 class="flex items-center gap-2 text-md text-white">
+            Jayp.png 👋
+          </h6>
         </div>
+      </div>
     </div>
     <!--aboutmeee-->
 
     <div id="About Me" class="text-white w-full px-[20%] -scroll-mt-[-80px]">
-        <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">------------------------ ABOUT ME -------------------------</h2>
-        <div class="flex w-full flex-col lg:flex-row items-center justify-evenly gap-20 my-20">
-            <div class="max-w-max mx-auto relative">
-                <img src="./images/portrait-programmer-working-with-pc.png" alt="" class="w-80 sm:w-80 rounded-3xl max-w-none">
-            </div>
-            <div class="flex-1">
-                <p class="mb=10 text-xl max-w-2xl font-plus-jakarta">A Second-year Computer Science and Design student with a passion for creative
-                     problem-solving and a strong foundation in programming. Eager to contribute my technical skills and
-                     innovative thinking to real-world projects. I am committed to continuous learning
-                      and seeking opportunities to apply my knowledge in dynamic and collaborative environments.
-                </p>
-                <br>
-                <p class="text-center font-awesome text-xl">MY INTERESTS: TECH | MUSIC | DRAWING | CHESS </p>
-            </div>
+      <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">
+        ------------------------ ABOUT ME -------------------------
+      </h2>
+      <div
+        class="flex w-full flex-col lg:flex-row items-center justify-evenly gap-20 my-20"
+      >
+        <div class="max-w-max mx-auto relative">
+          <img
+            src="./images/portrait-programmer-working-with-pc.png"
+            alt=""
+            class="w-80 sm:w-80 rounded-3xl max-w-none"
+          />
         </div>
+        <div class="flex-1">
+          <p class="mb=10 text-xl max-w-2xl font-plus-jakarta">
+            A Second-year Computer Science and Design student with a passion for
+            creative problem-solving and a strong foundation in programming.
+            Eager to contribute my technical skills and innovative thinking to
+            real-world projects. I am committed to continuous learning and
+            seeking opportunities to apply my knowledge in dynamic and
+            collaborative environments.
+          </p>
+          <br />
+          <p class="text-center font-awesome text-xl">
+            MY INTERESTS: TECH | MUSIC | DRAWING | CHESS
+          </p>
+        </div>
+      </div>
     </div>
-    <br>
+    <br />
     <div id="Education" class="text-white w-full px-[20%] -scroll-mt-[-64px]">
-        <div class="flex items-center justify-center gap-4">
-            <h2 class="text-center font-plus-jakarta  text-4xl text-[#12D861]">---------------------- EDUCATION</h2>
-            <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3"><span class="text-center text-4xl text-[#12D861]">-----------------------</span>
-        </div>
-        <br><br>
-        <ul class="flex flex-col gap-6 text-2xl font-semibold">
-            <li class="text-white border-[0.5px] border-gray-400 rounded-xl p-4 py-4 mr-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48] ">
-                COLLEGE<br><br>
-                <p class="text-white text-sm">SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY <br> <br> 
-                    Bachelor of Engineering<br><br> 
-                    2022 - 2026<br>
-                </p>
-            </li>
-            <li class="text-white border-[0.5px] border-gray-400 rounded-xl p-4 py-4 ml-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]">
-                SSC<br><br>          
-                <p class="text-white text-sm">Kokilaben Dhirubhai Ambani Reliance Foundation School CBSE<br> <br> 
-                    12th - Senior Secondary School<br><br> 
-                    82%<br>
-                </p>
-            </li>
-            <li class="border-[0.5px] border-gray-400 rounded-xl p-4 py-4 mr-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]">
-                HSC<br><br>
-                <p class="text-white text-sm">Kokilaben Dhirubhai Ambani Reliance Foundation School CBSE<br> <br> 
-                    10TH (SECONDARY EXAMINATION)<br><br> 
-                    92%<br>
-                </p>
-            </li>
-        </ul>
+      <div class="flex items-center justify-center gap-4">
+        <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">
+          ---------------------- EDUCATION
+        </h2>
+        <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3" /><span
+          class="text-center text-4xl text-[#12D861]"
+          >-----------------------</span
+        >
+      </div>
+      <br /><br />
+      <ul class="flex flex-col gap-6 text-2xl font-semibold">
+        <li
+          class="text-white border-[0.5px] border-gray-400 rounded-xl p-4 py-4 mr-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]"
+        >
+          COLLEGE<br /><br />
+          <p class="text-white text-sm">
+            SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY <br />
+            <br />
+            Bachelor of Engineering<br /><br />
+            2022 - 2026<br />
+          </p>
+        </li>
+        <li
+          class="text-white border-[0.5px] border-gray-400 rounded-xl p-4 py-4 ml-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]"
+        >
+          SSC<br /><br />
+          <p class="text-white text-sm">
+            Kokilaben Dhirubhai Ambani Reliance Foundation School CBSE<br />
+            <br />
+            12th - Senior Secondary School<br /><br />
+            82%<br />
+          </p>
+        </li>
+        <li
+          class="border-[0.5px] border-gray-400 rounded-xl p-4 py-4 mr-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]"
+        >
+          HSC<br /><br />
+          <p class="text-white text-sm">
+            Kokilaben Dhirubhai Ambani Reliance Foundation School CBSE<br />
+            <br />
+            10TH (SECONDARY EXAMINATION)<br /><br />
+            92%<br />
+          </p>
+        </li>
+      </ul>
     </div>
-    <br><br>
-    <div id="Skills" class="text-white justify-center items-center w-full px-[20%] -scroll-mt-[-66px] mt-10 mb-8">
-        <div class="flex items-center gap-4 justify-center">
-            <h2 class="text-center font-plus-jakarta  text-4xl text-[#12D861]">------------------------- SKILLS</h2>
-            <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3"><span class="text-center text-4xl text-[#12D861]">--------------------------</span>
-        </div>
-        <br><br>
-        <div class="flex">
-            <ul class="font-semibold ">
-                <li class="text-white border w-fit border-gray-400 rounded-xl px-4  pb-6 mx-auto cursor-pointer hover:bg-[#6D1DBA] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#FF8A22]">
-                    <h3 class="my-4 font-semibold text-xl text-white">Languages:</h3>
-                    <p class="text-white ">-> Basics of C & SQL<br> 
-                        -> C++<br>
-                        -> Can work with Figma, Blender<br>
-                        -> Bascis of HTML, tailwind CSS<br>
-                    </p>
-                </li>
-            </ul>
-            <h4 class="mx-auto my-4 text-white text-center items-center justify-center text-2xl"></h4>
-            <ul class="flex items-center gap-3 sm:gap-5 ">
-                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
-                    <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
-                </li>
-                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
-                    <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
-                </li>
-                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
-                    <img src="./images/git.png" alt="" class="w-5 sm:w-7">
-                </li>
-                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
-                    <img src="./images/tailwind-css-48.png" alt="" class="w-5 sm:w-7">
-                </li>
-                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
-                    <img src="./images/blender-48.png" alt="" class="w-5 sm:w-7">
-                </li>
-                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
-                    <img src="./images/html-48.png" alt="" class="w-5 sm:w-7">
-                </li>
-                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
-                    <img src="./images/icons8-c-48.png" alt="" class="w-5 sm:w-7">
-                </li> 
-            </ul>
-            
-        </div>
-        <ul class="text-white text-center mt-10 font-plus-jakarta font-semibold text-xl">
-            <p>SOFT SKILLS:  Time management | Creativity | Good communication skills |<br>  Able to work in a team | Active Listener</p>
+    <br /><br />
+    <div
+      id="Skills"
+      class="text-white justify-center items-center w-full px-[20%] -scroll-mt-[-66px] mt-10 mb-8"
+    >
+      <div class="flex items-center gap-4 justify-center">
+        <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">
+          ------------------------- SKILLS
+        </h2>
+        <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3" /><span
+          class="text-center text-4xl text-[#12D861]"
+          >--------------------------</span
+        >
+      </div>
+      <br /><br />
+      <div class="flex">
+        <ul class="font-semibold">
+          <li
+            class="text-white border w-fit border-gray-400 rounded-xl px-4 pb-6 mx-auto cursor-pointer hover:bg-[#6D1DBA] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#FF8A22]"
+          >
+            <h3 class="my-4 font-semibold text-xl text-white">Languages:</h3>
+            <p class="text-white">
+              -> Basics of C & SQL<br />
+              -> C++<br />
+              -> Can work with Figma, Blender<br />
+              -> Bascis of HTML, tailwind CSS<br />
+            </p>
+          </li>
         </ul>
+        <h4
+          class="mx-auto my-4 text-white text-center items-center justify-center text-2xl"
+        ></h4>
+        <ul class="flex items-center gap-3 sm:gap-5">
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500"
+          >
+            <img src="./images/vscode.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500"
+          >
+            <img src="./images/figma.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500"
+          >
+            <img src="./images/git.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500"
+          >
+            <img src="./images/tailwind-css-48.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500"
+          >
+            <img src="./images/blender-48.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500"
+          >
+            <img src="./images/html-48.png" alt="" class="w-5 sm:w-7" />
+          </li>
+          <li
+            class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500"
+          >
+            <img src="./images/icons8-c-48.png" alt="" class="w-5 sm:w-7" />
+          </li>
+        </ul>
+      </div>
+      <ul
+        class="text-white text-center mt-10 font-plus-jakarta font-semibold text-xl"
+      >
+        <p>
+          SOFT SKILLS: Time management | Creativity | Good communication skills
+          |<br />
+          Able to work in a team | Active Listener
+        </p>
+      </ul>
     </div>
-    
-    <br><br>
-    <div id="Contact" class="text-white w-full items-center px-[20%] -scroll-mt-[-64px] bg-no-repeat bg-[length:90%_auto] bg-center">
-        <div class="flex flex-col gap-4">
-            <h2 class="text-center font-plus-jakarta  text-4xl text-[#12D861]">------------------- CONNECT WITH ME --------------------</h2>
-            <p class="text-center max-w-3xl text-xl font-plus-jakarta mx-auto mt-5 mb-12">I'm always excited to hear about new projects and collaborations. Whether you have an idea you want to bring to life, need a designer or developer for your team, or just want to chat about the latest industry trends, feel free to drop me a message using the form below. I'll do my best to get back to you as soon as possible. Looking forward to hearing from you!</p>
-            <div class="items-center justify-center mx-auto border-gray-400 bg-[#bfe0fb4e] px-6 rounded-md mb-4 pb-6 text-black">
-                <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx:auto">
-                    <input type="hidden" name="access_key" value="72c134e2-e6cf-427d-8457-515e2953f240">
-                    <div class="flex gap-6 mt-10 mb-8 ml-auto">
-                        <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px]
-                         border-gray-400 rounded-md bg-white/90" required name="name">
-                        <input type="email" placeholder="Enter your email" class="flex-1 p-3 outline-none border-[0.5px]
-                         border-gray-400 rounded-md bg-white/90" required name="email">
-                    </div>
-                    <textarea rows="6" placeholder="Your thoughts?" class="w-full p-4 outline-none border-[0.5px]
-                     border-gray-400 rounded-md bg-white mb-6" required name="message"></textarea>
-                    <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 ">Submit
-                        <img src="./images/right-arrow-dark.png" alt="" class="w-4">
-                    </button>
-                </form>
+
+    <br /><br />
+    <div
+      id="Contact"
+      class="text-white w-full items-center px-[20%] -scroll-mt-[-64px] bg-no-repeat bg-[length:90%_auto] bg-center"
+    >
+      <div class="flex flex-col gap-4">
+        <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">
+          ------------------- CONNECT WITH ME --------------------
+        </h2>
+        <p
+          class="text-center max-w-3xl text-xl font-plus-jakarta mx-auto mt-5 mb-12"
+        >
+          I'm always excited to hear about new projects and collaborations.
+          Whether you have an idea you want to bring to life, need a designer or
+          developer for your team, or just want to chat about the latest
+          industry trends, feel free to drop me a message using the form below.
+          I'll do my best to get back to you as soon as possible. Looking
+          forward to hearing from you!
+        </p>
+        <div
+          class="items-center justify-center mx-auto border-gray-400 bg-[#bfe0fb4e] px-6 rounded-md mb-4 pb-6 text-black"
+        >
+          <form
+            method="POST"
+            action="https://api.web3forms.com/submit"
+            class="max-w-2xl mx:auto"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="72c134e2-e6cf-427d-8457-515e2953f240"
+            />
+            <div class="flex gap-6 mt-10 mb-8 ml-auto">
+              <input
+                type="text"
+                placeholder="Enter your name"
+                class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white/90"
+                required
+                name="name"
+              />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white/90"
+                required
+                name="email"
+              />
             </div>
+            <textarea
+              rows="6"
+              placeholder="Your thoughts?"
+              class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+              required
+              name="message"
+            ></textarea>
+            <button
+              class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500"
+            >
+              Submit
+              <img src="./images/right-arrow-dark.png" alt="" class="w-4" />
+            </button>
+          </form>
         </div>
+      </div>
     </div>
 
     <!--footer-->
     <div class="mt-20 text-white">
-        <div class="text-center">
-            <h3 class="w-36 mx-auto text-white font-bold px-4 text-2xl py-4">JayP007</h3>
-            <div class="w-max flex items-center gap-2 mx-auto">
-                <img src="./images/mail_icon_dark.png" alt="" class="w-6">jaypandya428@gmail.com
-            </div>
+      <div class="text-center">
+        <h3 class="w-36 mx-auto text-white font-bold px-4 text-2xl py-4">
+          JayP007
+        </h3>
+        <div class="w-max flex items-center gap-2 mx-auto">
+          <img
+            src="./images/mail_icon_dark.png"
+            alt=""
+            class="w-6"
+          />jaypandya428@gmail.com
         </div>
-        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
-            <p>© 2024 Jay Pandya. All rights reserved.</p>
-        </div>
+      </div>
+      <div
+        class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6"
+      >
+        <p>© 2024 Jay Pandya. All rights reserved.</p>
+      </div>
     </div>
 
     <script src="./script.js"></script>
     <script>
-        let text = new SplitType('#animation');
-        let characters = document.querySelectorAll('.char');
-        for(i=0; i<characters.length; i++){
-            characters[i].classList.add('translate-y-full');
-        }
+      let text = new SplitType("#animation");
+      let characters = document.querySelectorAll(".char");
+      for (i = 0; i < characters.length; i++) {
+        characters[i].classList.add("translate-y-full");
+      }
 
-        gsap.to('.char',{
-            y:0,
-            stagger: 0.05,
-            delay: 0.02,
-            duration:0.5
-            
+      gsap.to(".char", {
+        y: 0,
+        stagger: 0.05,
+        delay: 0.02,
+        duration: 0.5,
+      });
+    </script>
+    <script>
+      anime
+        .timeline({ loop: true })
+        .add({
+          targets: ".ml5 .line",
+          opacity: [0.5, 1],
+          scaleX: [0, 1],
+          easing: "easeInOutExpo",
+          duration: 700,
         })
-
-    </script>
-    <script>
-        anime.timeline({loop: true})
-  .add({
-    targets: '.ml5 .line',
-    opacity: [0.5,1],
-    scaleX: [0, 1],
-    easing: "easeInOutExpo",
-    duration: 700
-  }).add({
-    targets: '.ml5 .line',
-    duration: 600,
-    easing: "easeOutExpo",
-    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
-  }).add({
-    targets: '.ml5 .ampersand',
-    opacity: [0,1],
-    scaleY: [0.5, 1],
-    easing: "easeOutExpo",
-    duration: 600,
-    offset: '-=600'
-  }).add({
-    targets: '.ml5 .letters-left',
-    opacity: [0,1],
-    translateX: ["0.5em", 0],
-    easing: "easeOutExpo",
-    duration: 600,
-    offset: '-=300'
-  }).add({
-    targets: '.ml5 .letters-right',
-    opacity: [0,1],
-    translateX: ["-0.5em", 0],
-    easing: "easeOutExpo",
-    duration: 600,
-    offset: '-=600'
-  }).add({
-    targets: '.ml5',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
+        .add({
+          targets: ".ml5 .line",
+          duration: 600,
+          easing: "easeOutExpo",
+          translateY: (el, i) => -0.625 + 0.625 * 2 * i + "em",
+        })
+        .add({
+          targets: ".ml5 .ampersand",
+          opacity: [0, 1],
+          scaleY: [0.5, 1],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: "-=600",
+        })
+        .add({
+          targets: ".ml5 .letters-left",
+          opacity: [0, 1],
+          translateX: ["0.5em", 0],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: "-=300",
+        })
+        .add({
+          targets: ".ml5 .letters-right",
+          opacity: [0, 1],
+          translateX: ["-0.5em", 0],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: "-=600",
+        })
+        .add({
+          targets: ".ml5",
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000,
+        });
     </script>
 
     <script>
-        var textWrapper = document.querySelector('.ml13');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      var textWrapper = document.querySelector(".ml13");
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml13 .letter',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1400,
-    delay: (el, i) => 300 + 30 * i
-  }).add({
-    targets: '.ml13 .letter',
-    translateY: [0,-100],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 1200,
-    delay: (el, i) => 100 + 30 * i
-  });
+      anime
+        .timeline({ loop: true })
+        .add({
+          targets: ".ml13 .letter",
+          translateY: [100, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1400,
+          delay: (el, i) => 300 + 30 * i,
+        })
+        .add({
+          targets: ".ml13 .letter",
+          translateY: [0, -100],
+          opacity: [1, 0],
+          easing: "easeInExpo",
+          duration: 1200,
+          delay: (el, i) => 100 + 30 * i,
+        });
     </script>
 
-</body>
+    <script>
+      function toggleMode() {
+        var icon = document.getElementById("mode-icon");
+        var body = document.body;
 
+        if (icon.classList.contains("fa-sun")) {
+          icon.classList.remove("fa-sun");
+          icon.classList.add("fa-moon");
+          body.classList.add("dark-mode");
+        } else {
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
+          body.classList.remove("dark-mode");
+        }
+      }
+    </script>
+  </body>
 </html>

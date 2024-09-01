@@ -1,3 +1,17 @@
+.dark-mode {
+  --bg-color: #000;
+  --text-color: #fff;
+}
+
+:root {
+  --background-image: url("./images/header-bg-color.png");
+  --text-color: #000;
+}
+
+body {
+  background: var(--bg-color);
+}
+
 .ml5 {
     position: relative;
     font-weight: 300;
@@ -51,4 +65,12 @@
     display: inline-block;
     line-height: 1em;
   }
+
+  .mode-toggle {
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
 
