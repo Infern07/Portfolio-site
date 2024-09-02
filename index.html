@@ -97,16 +97,23 @@
       <div class="w-full h-screen flex items-center justify-evenly">
         <div class="flex flex-col border-spacing-4 gap-4">
           <h1
-            class="text-3xl sm:text-6xl lg:text-[66px] text-white mb-12 font-plus-jakarta font-semibold"
+            class="text-3xl sm:text-6xl lg:text-[66px] text-white mb-10 font-plus-jakarta font-semibold"
           >
             <span class="text-[#12D861]">Hello!</span> I'm Jay<br />
-            <h1 class="ml5 -mt-12 text-white p-2 text-6xl">
-              <span class="text-wrapper">
-                <span class="line line1 text-white"></span>
-                <span class="letters letters-left text-white">Web</span>
-                <span class="letters letters-right text-white">Designer</span>
-                <span class="line line2"></span>
+            <h1 class="-mt-12 text-white p-2 text-6xl">
+              <span class="word text-[#ff8922c4]" style="display: none"
+                >A Student</span
+              >
+              <span class="word text-wrapper">
+                <span class="letters letters-left text-[#F1FF48]">Web</span>
+                <span class="letters letters-right text-[#F1FF48]"
+                  >Designer</span
+                >
               </span>
+              <span class="word text-[#6D1DBA]" style="display: none"
+                >Tech Enthusiast</span
+              >
+              <br />
             </h1>
             <span class="text-white font-semibold text-6xl"
               >Based in India.</span
@@ -128,9 +135,6 @@
 
         <div class="flex-col border border-gray-600 p-2 rounded-xl">
           <img src="./images/jaypfp.jpg" alt="" class="rounded-md" />
-          <h6 class="flex items-center gap-2 text-md text-white">
-            Jayp.png 👋
-          </h6>
         </div>
       </div>
     </div>
@@ -383,96 +387,6 @@
     </div>
 
     <script src="./script.js"></script>
-    <script>
-      let text = new SplitType("#animation");
-      let characters = document.querySelectorAll(".char");
-      for (i = 0; i < characters.length; i++) {
-        characters[i].classList.add("translate-y-full");
-      }
-
-      gsap.to(".char", {
-        y: 0,
-        stagger: 0.05,
-        delay: 0.02,
-        duration: 0.5,
-      });
-    </script>
-    <script>
-      anime
-        .timeline({ loop: true })
-        .add({
-          targets: ".ml5 .line",
-          opacity: [0.5, 1],
-          scaleX: [0, 1],
-          easing: "easeInOutExpo",
-          duration: 700,
-        })
-        .add({
-          targets: ".ml5 .line",
-          duration: 600,
-          easing: "easeOutExpo",
-          translateY: (el, i) => -0.625 + 0.625 * 2 * i + "em",
-        })
-        .add({
-          targets: ".ml5 .ampersand",
-          opacity: [0, 1],
-          scaleY: [0.5, 1],
-          easing: "easeOutExpo",
-          duration: 600,
-          offset: "-=600",
-        })
-        .add({
-          targets: ".ml5 .letters-left",
-          opacity: [0, 1],
-          translateX: ["0.5em", 0],
-          easing: "easeOutExpo",
-          duration: 600,
-          offset: "-=300",
-        })
-        .add({
-          targets: ".ml5 .letters-right",
-          opacity: [0, 1],
-          translateX: ["-0.5em", 0],
-          easing: "easeOutExpo",
-          duration: 600,
-          offset: "-=600",
-        })
-        .add({
-          targets: ".ml5",
-          opacity: 0,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 1000,
-        });
-    </script>
-
-    <script>
-      var textWrapper = document.querySelector(".ml13");
-      textWrapper.innerHTML = textWrapper.textContent.replace(
-        /\S/g,
-        "<span class='letter'>$&</span>"
-      );
-
-      anime
-        .timeline({ loop: true })
-        .add({
-          targets: ".ml13 .letter",
-          translateY: [100, 0],
-          translateZ: 0,
-          opacity: [0, 1],
-          easing: "easeOutExpo",
-          duration: 1400,
-          delay: (el, i) => 300 + 30 * i,
-        })
-        .add({
-          targets: ".ml13 .letter",
-          translateY: [0, -100],
-          opacity: [1, 0],
-          easing: "easeInExpo",
-          duration: 1200,
-          delay: (el, i) => 100 + 30 * i,
-        });
-    </script>
 
     <script>
       function toggleMode() {
@@ -489,6 +403,37 @@
           body.classList.remove("dark-mode");
         }
       }
+    </script>
+
+    <script>
+      const words = document.querySelectorAll(".word");
+      let currentWordIndex = 0;
+
+      function showNextWord() {
+        // Hide the current word
+        anime({
+          targets: words[currentWordIndex],
+          translateX: [0, -100], // Slide out to the left
+          opacity: [1, 0],
+          duration: 800,
+          easing: "easeInExpo",
+          complete: function () {
+            words[currentWordIndex].style.display = "none"; // Hide the word after the animation completes
+            currentWordIndex = (currentWordIndex + 1) % words.length;
+            words[currentWordIndex].style.display = "inline-block"; // Show the next word
+            anime({
+              targets: words[currentWordIndex],
+              translateX: [100, 0], // Slide in from the right
+              opacity: [0, 1],
+              duration: 800,
+              easing: "easeOutExpo",
+            });
+          },
+        });
+      }
+
+      // Start the animation with a delay between transitions
+      setInterval(showNextWord, 3000); // Adjust the interval timing to fit the animation speed
     </script>
   </body>
 </html>
