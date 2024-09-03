@@ -1,11 +1,21 @@
 .dark-mode {
   --bg-color: #000;
   --text-color: #fff;
+  --button-color: black;
 }
 
 :root {
-  --background-image: url("./images/header-bg-color.png");
+    background-color: aliceblue;
   --text-color: #000;
+  --button-color: white;
+}
+
+.textcolor{
+  color: var(--text-color);
+}
+
+.buttoncolor{
+  color: var(--button-color)
 }
 
 body {

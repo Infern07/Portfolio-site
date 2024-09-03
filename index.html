@@ -26,11 +26,11 @@
   <body class="overflow-x-hidden font-plus-jakarta dark-mode">
     <nav class="w-full fixed px-5 py-4 flex mx-24 justify-center z-50">
       <div class="flex items-center justify-between w-full">
-        <h2 class="font-bold px-4 text-2xl text-white cursor-pointer">
+        <h2 class="font-bold px-4 text-2xl textcolor cursor-pointer">
           <a href="#top">JayP007</a>
         </h2>
         <ul
-          class="hidden md:flex items-center border gap-12 rounded-full px-12 py-3 backdrop-blur-md text-white shadow-sm bg-opacity-50"
+          class="hidden md:flex items-center border gap-12 rounded-full px-12 py-3 backdrop-blur-md textcolor shadow-sm bg-opacity-50"
         >
           <li><a href="#top">Home</a></li>
           <li><a href="#About Me">About Me</a></li>
@@ -40,24 +40,22 @@
         </ul>
         <div class="flex items-center gap-4">
           <div class="mode-toggle" onclick="toggleMode()">
-            <i id="mode-icon" class="fas fa-moon"></i>
+            <i id="mode-icon" class="fas textcolor fa-moon"></i>
           </div>
           <a
             href="./images/Resume.pdf"
             download
-            class="hidden lg:flex items-center gap-3 px-6 backdrop-blur-md py-2.5 border text-white border-gray-500 rounded-full ml-4"
+            class="hidden lg:flex items-center gap-3 px-6 backdrop-blur-md py-2.5 border textcolor border-gray-500 rounded-full ml-4"
           >
             <h3>Resume</h3>
-            <span class="w-6 text-[#F8f8f8]"
-              ><img src="./icons8-download-64.png"
-            /></span>
+            <i class="fa-solid fa-download textcolor"></i>
           </a>
           <button class="block md:hidden ml-3" onclick="openMenu()">
             <img src="./images/menu-black.png" alt="" class="w-6" />
           </button>
         </div>
 
-        <div>
+        <div >
           <!--mobile menu-->
           <ul
             id="sidemenu"
@@ -84,29 +82,29 @@
     <div class="w-full h-screen flex items-center px-12 font-plus-jakarta">
       <div class="flex flex-col gap-24 fixed">
         <a href="https://www.linkedin.com/in/jay-pandya9904/" target="_blank"
-          ><i class="fa-brands fa-linkedin text-[#F8F8F8] fa-2xl"></i
+          ><i class="fa-brands fa-linkedin textcolor fa-2xl"></i
         ></a>
         <a href="https://x.com/JP_0017" target="_blank">
-          <i class="fa-brands fa-square-x-twitter text-[#F8F8F8] fa-2xl"></i
+          <i class="fa-brands fa-square-x-twitter textcolor fa-2xl"></i
         ></a>
         <a href="https://github.com/Infern07" target="_blank"
-          ><i class="fa-brands fa-github text-[#F8F8F8] fa-2xl"></i
+          ><i class="fa-brands fa-github textcolor fa-2xl"></i
         ></a>
       </div>
 
       <div class="w-full h-screen flex items-center justify-evenly">
         <div class="flex flex-col border-spacing-4 gap-4">
           <h1
-            class="text-3xl sm:text-6xl lg:text-[66px] text-white mb-10 font-plus-jakarta font-semibold"
+            class="text-3xl sm:text-6xl lg:text-[66px] textcolor mb-4 font-plus-jakarta font-semibold"
           >
-            <span class="text-[#12D861]">Hello!</span> I'm Jay<br />
-            <h1 class="-mt-12 text-white p-2 text-6xl">
+            <span class="text-[#12D861]">Hello!<span class="textcolor"> I'm Jay</span><br>
+            <h1 class="textcolor p-2 text-6xl -mt-18 ">
               <span class="word text-[#ff8922c4]" style="display: none"
                 >A Student</span
               >
               <span class="word text-wrapper">
-                <span class="letters letters-left text-[#F1FF48]">Web</span>
-                <span class="letters letters-right text-[#F1FF48]"
+                <span class="letters letters-left text-[#fc6c85]">Web</span>
+                <span class="letters letters-right text-[#fc6c85]"
                   >Designer</span
                 >
               </span>
@@ -115,15 +113,15 @@
               >
               <br />
             </h1>
-            <span class="text-white font-semibold text-6xl"
+            <span class="textcolor font-semibold text-6xl"
               >Based in India.</span
             >
           </h1>
           <a href="mailto:jaypandya428@gmail.com"
             ><div
-              class="rounded-md w-fit mt-4 px-6 py-3 bg-gradient-to-r from-[#3c3b3b] to-[#1E1E1E] text-white flex items-center gap-2 drop-shadow-sm cursor-pointer"
+              class="rounded-md w-fit mt-4 px-6 py-3 bg-gradient-to-r from-[#3c3b3b] to-[#1E1E1E] textcolor flex items-center gap-2 drop-shadow-sm cursor-pointer"
             >
-              <label class="cursor-pointer">Contact Me </label>
+              <label class="cursor-pointer text-white">Contact Me </label>
               <img
                 src="./images/right-arrow-white.png"
                 alt="arrow-image"
@@ -140,9 +138,9 @@
     </div>
     <!--aboutmeee-->
 
-    <div id="About Me" class="text-white w-full px-[20%] -scroll-mt-[-80px]">
+    <div id="About Me" class="textcolor w-full px-[20%] -scroll-mt-[-80px]">
       <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">
-        ------------------------ ABOUT ME -------------------------
+        ABOUT ME
       </h2>
       <div
         class="flex w-full flex-col lg:flex-row items-center justify-evenly gap-20 my-20"
@@ -171,23 +169,20 @@
       </div>
     </div>
     <br />
-    <div id="Education" class="text-white w-full px-[20%] -scroll-mt-[-64px]">
+    <div id="Education" class="textcolor w-full px-[20%] -scroll-mt-[-64px]">
       <div class="flex items-center justify-center gap-4">
         <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">
-          ---------------------- EDUCATION
+          EDUCATION
         </h2>
-        <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3" /><span
-          class="text-center text-4xl text-[#12D861]"
-          >-----------------------</span
-        >
+        <i class="fa-solid fa-user-graduate textcolor fa-xl items-center"></i>
       </div>
       <br /><br />
       <ul class="flex flex-col gap-6 text-2xl font-semibold">
         <li
-          class="text-white border-[0.5px] border-gray-400 rounded-xl p-4 py-4 mr-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]"
+          class="textcolor border-[0.5px] border-gray-400 rounded-xl p-4 py-4 mr-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]"
         >
           COLLEGE<br /><br />
-          <p class="text-white text-sm">
+          <p class="textcolor text-sm">
             SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY <br />
             <br />
             Bachelor of Engineering<br /><br />
@@ -195,10 +190,10 @@
           </p>
         </li>
         <li
-          class="text-white border-[0.5px] border-gray-400 rounded-xl p-4 py-4 ml-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]"
+          class="textcolor border-[0.5px] border-gray-400 rounded-xl p-4 py-4 ml-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]"
         >
           SSC<br /><br />
-          <p class="text-white text-sm">
+          <p class="textcolor text-sm">
             Kokilaben Dhirubhai Ambani Reliance Foundation School CBSE<br />
             <br />
             12th - Senior Secondary School<br /><br />
@@ -209,7 +204,7 @@
           class="border-[0.5px] border-gray-400 rounded-xl p-4 py-4 mr-auto cursor-pointer hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#F1FF48]"
         >
           HSC<br /><br />
-          <p class="text-white text-sm">
+          <p class="textcolor text-sm">
             Kokilaben Dhirubhai Ambani Reliance Foundation School CBSE<br />
             <br />
             10TH (SECONDARY EXAMINATION)<br /><br />
@@ -221,25 +216,22 @@
     <br /><br />
     <div
       id="Skills"
-      class="text-white justify-center items-center w-full px-[20%] -scroll-mt-[-66px] mt-10 mb-8"
+      class="textcolor justify-center items-center w-full px-[20%] -scroll-mt-[-66px] mt-10 mb-8"
     >
       <div class="flex items-center gap-4 justify-center">
         <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">
-          ------------------------- SKILLS
+       SKILLS
         </h2>
-        <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3" /><span
-          class="text-center text-4xl text-[#12D861]"
-          >--------------------------</span
-        >
+        <i class="fa-solid fa-code fa-xl"></i>
       </div>
       <br /><br />
       <div class="flex">
         <ul class="font-semibold">
           <li
-            class="text-white border w-fit border-gray-400 rounded-xl px-4 pb-6 mx-auto cursor-pointer hover:bg-[#6D1DBA] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#FF8A22]"
+            class="textcolor border w-fit border-gray-400 rounded-xl px-4 pb-6 mx-auto cursor-pointer hover:bg-[#6D1DBA] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#FF8A22]"
           >
-            <h3 class="my-4 font-semibold text-xl text-white">Languages:</h3>
-            <p class="text-white">
+            <h3 class="my-4 font-semibold text-xl textcolor">Languages:</h3>
+            <p class="textcolor">
               -> Basics of C & SQL<br />
               -> C++<br />
               -> Can work with Figma, Blender<br />
@@ -248,7 +240,7 @@
           </li>
         </ul>
         <h4
-          class="mx-auto my-4 text-white text-center items-center justify-center text-2xl"
+          class="mx-auto my-4 textcolor text-center items-center justify-center text-2xl"
         ></h4>
         <ul class="flex items-center gap-3 sm:gap-5">
           <li
@@ -289,7 +281,7 @@
         </ul>
       </div>
       <ul
-        class="text-white text-center mt-10 font-plus-jakarta font-semibold text-xl"
+        class="textcolor text-center mt-10 font-plus-jakarta font-semibold text-xl"
       >
         <p>
           SOFT SKILLS: Time management | Creativity | Good communication skills
@@ -302,11 +294,11 @@
     <br /><br />
     <div
       id="Contact"
-      class="text-white w-full items-center px-[20%] -scroll-mt-[-64px] bg-no-repeat bg-[length:90%_auto] bg-center"
+      class="textcolor w-full items-center px-[20%] -scroll-mt-[-64px] bg-no-repeat bg-[length:90%_auto] bg-center"
     >
       <div class="flex flex-col gap-4">
         <h2 class="text-center font-plus-jakarta text-4xl text-[#12D861]">
-          ------------------- CONNECT WITH ME --------------------
+          CONNECT WITH ME
         </h2>
         <p
           class="text-center max-w-3xl text-xl font-plus-jakarta mx-auto mt-5 mb-12"
@@ -366,17 +358,13 @@
     </div>
 
     <!--footer-->
-    <div class="mt-20 text-white">
+    <div class="mt-20 textcolor">
       <div class="text-center">
-        <h3 class="w-36 mx-auto text-white font-bold px-4 text-2xl py-4">
+        <h3 class="w-36 mx-auto textcolor font-bold px-4 text-2xl py-4">
           JayP007
         </h3>
         <div class="w-max flex items-center gap-2 mx-auto">
-          <img
-            src="./images/mail_icon_dark.png"
-            alt=""
-            class="w-6"
-          />jaypandya428@gmail.com
+          <i class="fa-solid fa-envelope fa-xl textcolor"></i>jaypandya428@gmail.com
         </div>
       </div>
       <div
