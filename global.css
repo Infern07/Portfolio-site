@@ -1,11 +1,11 @@
 .dark-mode {
-  --bg-color: #000;
+  background: linear-gradient(135deg, #1c1c1c,#5b2c6f);
   --text-color: #fff;
   --button-color: black;
 }
 
 :root {
-    background-color: aliceblue;
+  background-image: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
   --text-color: #000;
   --button-color: white;
 }
