@@ -20,6 +20,7 @@
 
 body {
   background: var(--bg-color);
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .ml5 {

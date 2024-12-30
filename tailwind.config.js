@@ -1,11 +1,12 @@
-tailwind.config = {
-  theme:{
-    gridTemplateColumns:{
-      'auto': 'repeat(auto-fit, minmax(200px, 1fr))'
+// tailwind.config.js
+module.exports = {
+  content: ["./*.html"],
+  theme: {
+    extend: {
+      fontFamily: {
+        'plus-jakarta': ['"Plus Jakarta Sans"', 'sans-serif'], // Define the font here
+      },
     },
-    fontFamily:{
-      PlusJakartaSans:["Plus Jakarta Sans", "system-ui"]
-    }
-  }
-}
-
+  },
+  plugins: [],
+};
