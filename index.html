@@ -26,12 +26,12 @@
 
   <body class="overflow-x-hidden font-plus-jakarta dark-mode">
     <nav class="w-full fixed px-5 py-4 flex mx-24 justify-center z-50 backdrop-blur-lg">
-      <div class="flex items-center justify-between w-full">
+      <div class="flex items-center justify-between w-full max-w-7xl">
         <h2 class="font-bold px-4 text-2xl textcolor cursor-pointer">
           <a href="#top">JayP007</a>
         </h2>
         <ul
-          class="hidden md:flex items-center gap-12 rounded-full px-12 py-3 backdrop-blur-md textcolor  bg-opacity-50"
+          class="hidden lg:flex items-center gap-8 xl:gap-12 rounded-full px-8 xl:px-12 py-3 backdrop-blur-md textcolor bg-opacity-50"
         >
           <li class="hover:border-b-2 border-green-500 hover:text-green-500"><a href="#About Me">About Me</a></li>
           <li class="hover:border-b-2 border-green-500 hover:text-green-500"><a href="#Education">Education</a></li>
@@ -46,12 +46,12 @@
           <a
             href="./images/JayPandya_Resume.pdf"
             download
-            class="hidden lg:flex items-center gap-3 px-6 backdrop-blur-md py-2.5 border textcolor border-gray-500 rounded-full ml-4 hover:bg-green-500"
+            class="hidden xl:flex items-center gap-3 px-4 xl:px-6 backdrop-blur-md py-2.5 border textcolor border-gray-500 rounded-full ml-4 hover:bg-green-500 text-sm xl:text-base"
           >
             <h3>Resume</h3>
             <i class="fa-solid fa-download textcolor"></i>
           </a>
-          <button class="block md:hidden ml-3" onclick="openMenu()">
+          <button class="block lg:hidden ml-3" onclick="openMenu()">
             <img src="./images/menu-black.png" alt="" class="w-6" />
           </button>
         </div>
@@ -60,7 +60,7 @@
           <!--mobile menu-->
           <ul
             id="sidemenu"
-            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blend-multiply transition duration-500"
+            class="flex lg:hidden flex-col gap-6 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen mobile-menu-overlay transition duration-500"
           >
             <div class="absolute right-6 top-6" onclick="closeMenu()">
               <img
@@ -69,20 +69,30 @@
                 class="w-5 cursor-pointer"
               />
             </div>
-            <li><a href="#top" onclick="closeMenu()">Home</a></li>
-            <li><a href="#About Me" onclick="closeMenu()">About Me</a></li>
-            <li><a href="#Education" onclick="closeMenu()">Education</a></li>
-            <li><a href="#Projects" onclick="closeMenu()">Projects</a></li>
-            <li><a href="#Skills" onclick="closeMenu()">Skills</a></li>
-            <li><a href="#Contact" onclick="closeMenu()">Contact</a></li>
+            <li class="text-white text-lg"><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li class="text-white text-lg"><a href="#About Me" onclick="closeMenu()">About Me</a></li>
+            <li class="text-white text-lg"><a href="#Education" onclick="closeMenu()">Education</a></li>
+            <li class="text-white text-lg"><a href="#Projects" onclick="closeMenu()">Projects</a></li>
+            <li class="text-white text-lg"><a href="#Skills" onclick="closeMenu()">Skills</a></li>
+            <li class="text-white text-lg"><a href="#Contact" onclick="closeMenu()">Contact</a></li>
+            <li class="mt-4">
+              <a
+                href="./images/JayPandya_Resume.pdf"
+                download
+                class="flex items-center gap-3 px-4 py-2.5 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-300"
+              >
+                <h3>Resume</h3>
+                <i class="fa-solid fa-download"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!--header section-->
-    <div class=" w-full h-screen flex items-center px-12 font-plus-jakarta">
-      <div class="flex flex-col gap-24 fixed">
+    <div class="w-full min-h-screen flex items-center px-4 sm:px-8 lg:px-12 font-plus-jakarta">
+      <div class="hidden lg:flex flex-col gap-24 fixed left-4 xl:left-12">
         <a href="https://www.linkedin.com/in/jay-pandya9904/" target="_blank"
           ><i class="fa-brands fa-linkedin textcolor fa-2xl"></i
         ></a>
@@ -94,86 +104,403 @@
         ></a>
       </div>
 
-      <div class="w-full h-screen flex items-center justify-evenly">
-        <div class="flex flex-col border-spacing-4 gap-4">
+      <div class="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-evenly gap-8 lg:gap-4 pt-20 lg:pt-0">
+        <div class="flex flex-col gap-4 text-center lg:text-left order-2 lg:order-1">
           <h1
-            class="text-3xl sm:text-6xl lg:text-[66px] textcolor mb-4 font-plus-jakarta font-semibold"
+            class="hero-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[66px] textcolor mb-4 font-plus-jakarta font-semibold"
           >
-            <span class="text-[#12D861] sm:text-6xl lg:text-[66px]">Hello!<span class="textcolor sm:text-6xl lg:text-[66px]"> I'm Jay</span><br>
-            <h1 class="textcolor p-2 text-6xl -mt-18 sm:text-6xl lg:text-[66px]">
+            <span class="text-[#12D861]">Hello!</span><span class="textcolor"> I'm Jay</span><br>
+            <div class="textcolor p-2 hero-subtext text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl -mt-4 lg:-mt-8">
               <span class="word text-[#ff8922c4]" style="display: none"
                 >A Student</span
               >
               <span class="word text-wrapper">
                 <span class="letters letters-left text-[#fc6c85]">Web</span>
-                <span class="letters letters-right text-[#fc6c85] sm:text-6xl lg:text-[66px]"
+                <span class="letters letters-right text-[#fc6c85]"
                   >Designer</span
                 >
               </span>
-              <span class="word text-[#6D1DBA] sm:text-6xl lg:text-[66px]" style="display: none"
+              <span class="word text-[#6D1DBA]" style="display: none"
                 >Tech Enthusiast</span
               >
-              <br />
-            </h1>
-            <span class="textcolor font-semibold text-6xl sm:text-6xl lg:text-[66px]"
+            </div>
+            <span class="textcolor font-semibold hero-subtext text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
               >Based in India.</span
             >
           </h1>
           <a href="mailto:jaypandya428@gmail.com"
             ><div
-            class="inline-flex justify-center whitespace-nowrap rounded-lg px-3.5 py-3 text-sm font-medium text-slate-200 dark:text-slate-800 bg-gradient-to-r from-slate-800 to-slate-700 dark:from-slate-200 dark:to-slate-100 dark:hover:bg-slate-100 focus:outline-none focus:ring focus:ring-slate-500/50 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-500/50 relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.5)_50%,transparent_75%,transparent_100%)] dark:before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:before:bg-[position:-100%_0,0_0] hover:before:duration-[1500ms] shadow-lg"
+            class="inline-flex justify-center whitespace-nowrap rounded-lg px-4 py-3 text-sm md:text-base font-medium text-slate-200 dark:text-slate-800 bg-gradient-to-r from-slate-800 to-slate-700 dark:from-slate-200 dark:to-slate-100 dark:hover:bg-slate-100 focus:outline-none focus:ring focus:ring-slate-500/50 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-500/50 relative before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.5)_50%,transparent_75%,transparent_100%)] dark:before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:[transition:background-position_0s_ease] hover:before:bg-[position:-100%_0,0_0] hover:before:duration-[1500ms] shadow-lg"
             >
               <label class="cursor-pointer text-black gap-4" >Contact Me </label>
-              <i class="fa-solid fa-arrow-right fa-lg gap-6 items-center mt-2.5 ml-2"></i>
+              <i class="fa-solid fa-arrow-right fa-sm md:fa-lg gap-6 items-center mt-1 ml-2"></i>
             </div>
           </a>
+          
+          <!-- Mobile social links -->
+          <div class="flex lg:hidden justify-center gap-8 mt-6">
+            <a href="https://www.linkedin.com/in/jay-pandya9904/" target="_blank"
+              ><i class="fa-brands fa-linkedin textcolor fa-xl"></i
+            ></a>
+            <a href="https://x.com/JP_0017" target="_blank">
+              <i class="fa-brands fa-square-x-twitter textcolor fa-xl"></i
+            ></a>
+            <a href="https://github.com/Infern07" target="_blank"
+              ><i class="fa-brands fa-github textcolor fa-xl"></i
+            ></a>
+          </div>
         </div>
 
-        <div class="flex-col border border-gray-600 p-2 rounded-xl w-1/4 shadow-lg">
-          <img src="./images/pfp.jpg" alt="" class="rounded-md " />
+        <div class="flex-col border border-gray-600 p-2 rounded-xl w-64 sm:w-80 lg:w-1/4 shadow-lg order-1 lg:order-2">
+          <img src="./images/pfp.jpg" alt="" class="rounded-md w-full" />
         </div>
       </div>
     </div>
     <!--aboutmeee-->
 
-    <div id="About Me" class="textcolor w-full px-[16%] -scroll-mt-[-180px]">
+    <div id="About Me" class="textcolor w-full px-4 sm:px-8 lg:px-[16%] -scroll-mt-[-180px]">
       <h2 class="text-center font-plus-jakarta text-3xl text-[#12D861]">
         ABOUT ME
       </h2>
       <div
-        class="flex w-full flex-col lg:flex-row items-center justify-evenly gap-20 my-12"
+        class="flex w-full flex-col lg:flex-row items-center justify-center lg:justify-evenly gap-8 lg:gap-20 my-12"
       >
-        <div class="mb-16">
+        <div class="mb-8 lg:mb-16 order-2 lg:order-1">
           <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-<dotlottie-player src="https://lottie.host/3e5f8e44-aa11-4ec3-ad76-c5b7d4bab122/yBNOzt6PZU.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+          <dotlottie-player src="https://lottie.host/3e5f8e44-aa11-4ec3-ad76-c5b7d4bab122/yBNOzt6PZU.lottie" background="transparent" speed="1" style="width: 250px; height: 250px; max-width: 100%" loop autoplay></dotlottie-player>
         </div>
-        <div class="max-w-6xl">
-          <p class="mb-10 text-xl max-w-3xl font-plus-jakarta">
+        <div class="max-w-6xl order-1 lg:order-2">
+          <p class="mb-6 lg:mb-10 text-lg lg:text-xl max-w-3xl font-plus-jakarta text-center lg:text-left">
             I’m a third-year Computer Science and Design student who’s passionate about learning, growing,
             and finding creative solutions to challenges. I love working with others, sharing ideas, and
             exploring new ways to approach problems. For me, every project is an opportunity to learn something
             new and make a positive impact. I thrive in dynamic environments where I can adapt, contribute, and
             turn ideas into something meaningful.
           </p>
-          <br />
-          <p class="text-center font-awesome text-xl">
+          <p class="text-center font-awesome text-lg lg:text-xl">
             MY INTERESTS: TECH | MUSIC | DRAWING | CHESS
           </p>
         </div>
       </div>
     </div>
-    <br /><br />
-    <div id="Education" class="textcolor w-full px-[16%] -scroll-mt-[-192px]">
+    
+    <div id="Education" class="textcolor w-full px-4 sm:px-8 lg:px-[16%] -scroll-mt-[-192px] mt-16">
       <div class="flex items-center justify-center gap-4 mb-4">
         <h2 class="text-center font-plus-jakarta text-3xl text-[#12D861]">
           EDUCATION
         </h2>
         <i class="fa-solid fa-user-graduate textcolor fa-xl items-center"></i>
       </div>
-      <br /><br />
-      <ul class="flex flex-col gap-4 text-xl ">
-        <li class="flex items-center justify-between p-4 border-b border-gray-300 hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500">
-          <div>
+      <div class="mt-8">
+        <ul class="flex flex-col gap-4 text-lg lg:text-xl">
+          <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 border-b border-gray-300 hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 gap-2 sm:gap-0">
+            <div>
+              <h3 class="textcolor font-semibold">Bachelor of Engineering</h3>
+              <p class="textcolor text-sm">Sardar Vallabhbhai Patel Institute of Technology (2022-2026)</p>
+            </div>
+            <div class="text-left sm:text-right">
+              <p class="text-sm">Current - 8.76 CPI</p>
+            </div>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 border-b border-gray-300 hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 gap-2 sm:gap-0">
+            <div>
+              <h3 class="textcolor font-semibold">Senior Secondary School (12th)</h3>
+              <p class="textcolor text-sm">Kokilaben Dhirubhai Ambani Reliance Foundation School</p>
+            </div>
+            <div class="text-left sm:text-right">
+              <p class="text-sm">82%</p>
+            </div>
+          </li>
+          <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 border-b border-gray-300 hover:bg-[#ff8922c4] hover:-translate-y-1 duration-500 gap-2 sm:gap-0">
+            <div>
+              <h3 class="textcolor font-semibold">Secondary Examination (10th)</h3>
+              <p class="textcolor text-sm">Kokilaben Dhirubhai Ambani Reliance Foundation School</p>
+            </div>
+            <div class="text-left sm:text-right">
+              <p class="text-sm">92%</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      id="Projects"
+      class="textcolor w-full px-4 sm:px-8 lg:px-[16%] -scroll-mt-[-100px] mt-16 mb-8">
+      <div class="flex items-center gap-4 justify-center">
+        <h2 class="text-center font-plus-jakarta text-3xl text-[#12D861]">
+          PROJECTS
+        </h2>
+        <i class="fa-solid fa-project-diagram fa-xl"></i>
+      </div>
+      
+      <div class="mt-8 space-y-8">
+        <div id="NESTCRAFT" class="project-card flex flex-col lg:flex-row items-center gap-6 border-b border-gray-400 pb-6">
+          <div class="project-image w-full lg:w-96">
+            <div class="relative flex flex-col items-center justify-center w-full h-64 lg:h-72 rounded-md border-[2px] border-gray-50 overflow-hidden cursor-pointer group">
+              <img
+              src="./images/project-1.jpg"
+              alt="Project Screenshot"
+              class="absolute w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+              />
+                <div class="absolute w-full h-full bg-black bg-opacity-80 flex flex-col items-center justify-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-80">
+                  <h3 class="text-lg font-bold">NESTCRAFT</h3>
+                  <h4 class="text-sm">An e-commerce website</h4><br/>
+                  <p class="text-sm mt-2 text-center px-4">HTML, CSS, TailwindCSS, JS, Vercel</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="mb-4 text-2xl">NESTCRAFT</h3> 
+            <p class="text-base lg:text-lg mb-4">Nestfraft is an e-commerce website built with HTML, CSS, Tailwind CSS, and JavaScript that helps
+               users find their perfect home. The app offers a clean, responsive design with features 
+               like search, filters, and property cards. Tailwind CSS ensures smooth responsiveness across devices, 
+               while JavaScript adds interactivity for a seamless user experience.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
+              <a href="https://nestcraft.vercel.app/" target="_blank" class="border-b border-gray-400 hover:text-[#12D861] transition-colors">Live Demo</a>
+              <a href="https://github.com/Infern07/Ecommerce-Website" target="_blank" class="border-b border-gray-400 hover:text-[#12D861] transition-colors">Source Code</a>
+            </div>
+          </div>
+        </div>
+        
+        <div id="FINDMUCKS" class="project-card flex flex-col lg:flex-row-reverse items-center gap-6 border-b border-gray-400 pb-6">      
+          <div class="project-image w-full lg:w-96">
+            <div class="relative flex flex-col items-center justify-center w-full h-64 lg:h-72 rounded-md border-[2px] border-gray-50 overflow-hidden cursor-pointer group">
+              <img
+              src="./images/vinland.png"
+              alt="Project Screenshot"
+              class="absolute w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+              />
+                <div class="absolute w-full h-full bg-black bg-opacity-80 flex flex-col items-center justify-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-80">
+                  <h3 class="text-lg font-bold">FINDMUCKS</h3>
+                  <h4 class="text-sm">Mental health support platform</h4><br/>
+                  <p class="text-sm mt-2 text-center px-4">TypeScript, Node.js, TailwindCSS, MongoDB, Vercel</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="mb-4 text-2xl">FINDMUCKS</h3> 
+            <p class="text-base lg:text-lg mb-4">Findmucks is a mental health support platform developed as part of a hackathon project 
+              using TypeScript. It focuses on providing a safe space for individuals dealing with anxiety 
+              and depression. Key features include 24/7 support, anonymous interactions, and resources to help 
+              users manage their mental well-being. The platform combines clean design with a functional user 
+              interface to ensure a supportive and intuitive experience for all users.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
+              <a href="https://youtu.be/8utY3OLf9Xs?feature=shared" target="_blank" class="border-b border-gray-400 hover:text-[#12D861] transition-colors">Video Demo</a>
+              <a href="https://github.com/Infern07/FindMucks" target="_blank" class="border-b border-gray-400 hover:text-[#12D861] transition-colors">Source Code</a>
+            </div>
+          </div>
+        </div>
+        
+        <div id="ARTFOLIO" class="project-card flex flex-col lg:flex-row items-center gap-6 border-b pb-6 border-gray-400">
+          <div class="project-image w-full lg:w-96">
+            <div class="relative flex flex-col items-center justify-center w-full h-64 lg:h-72 rounded-md border-[2px] border-gray-50 overflow-hidden cursor-pointer group">
+              <img
+              src="./images/project-3.png"
+              alt="Project Screenshot"
+              class="absolute w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+              />
+                <div class="absolute w-full h-full bg-black bg-opacity-80 flex flex-col items-center justify-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-80">
+                  <h3 class="text-lg font-bold">ARTFOLIO</h3>
+                  <h4 class="text-sm">Digital art NFT platform</h4><br/>
+                  <p class="text-sm mt-2 text-center px-4">HTML, CSS, TailwindCSS, JS, React, Netlify</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="mb-4 text-2xl">ARTFOLIO</h3> 
+            <p class="text-base lg:text-lg mb-4">Artfolio is an innovative NFT-based platform designed for artists to showcase and trade their work. 
+              Built with modern web technologies, it provides a seamless interface for exploring, minting, and purchasing 
+              unique digital art pieces. The platform ensures a user-friendly experience with responsive design, interactive 
+              galleries, and secure NFT transactions. Artfolio empowers artists by connecting them directly with collectors 
+              in the digital space.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
+              <a href="https://artfolio-nft.netlify.app/" target="_blank" class="border-b border-gray-400 hover:text-[#12D861] transition-colors">Live Demo</a>
+              <a href="#" target="_blank" class="border-b border-gray-400 hover:text-[#12D861] transition-colors">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Skills" class="textcolor justify-center items-center w-full px-4 sm:px-8 lg:px-[16%] -scroll-mt-[-96px] mt-16 mb-8">
+      <div class="flex items-center gap-4 justify-center">
+        <h2 class="text-center font-plus-jakarta text-3xl text-[#12D861]">
+          SKILLS
+        </h2>
+        <i class="fa-solid fa-code fa-xl"></i>
+      </div>
+      <p class="text-lg lg:text-xl mt-6 text-center lg:text-left">I have honed my skills in modern web technologies to build dynamic and responsive user interfaces. Proficient in HTML, 
+        CSS, and Tailwind CSS, I ensure visually appealing and efficient designs. My understanding of JavaScript allows me to 
+        create interactive experiences, while my growing knowledge of React enhances my ability to develop scalable web 
+        applications. I am committed to continuous learning and strive to stay updated with the latest trends and frameworks 
+        in frontend development.</p>
+      <div class="mt-8">
+        <div class="skills-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto">
+            <svg class="w-full h-full">
+              <circle cx="50%" cy="50%" r="45%" class="stroke-gray-300 fill-none" stroke-width="8"></circle>
+              <circle cx="50%" cy="50%" r="45%" class="stroke-green-500 fill-none" stroke-width="8" stroke-dasharray="282" stroke-dashoffset="282" data-percentage="95"></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-xs sm:text-sm font-semibold">HTML</span>
+              <span class="block text-sm sm:text-base">95%</span>
+            </div>
+          </div>
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto">
+            <svg class="w-full h-full">
+              <circle cx="50%" cy="50%" r="45%" class="stroke-gray-300 fill-none" stroke-width="8"></circle>
+              <circle cx="50%" cy="50%" r="45%" class="stroke-green-500 fill-none" stroke-width="8" stroke-dasharray="282" stroke-dashoffset="282" data-percentage="90"></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-xs sm:text-sm font-semibold">CSS</span>
+              <span class="block text-sm sm:text-base">90%</span>
+            </div>
+          </div>
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto">
+            <svg class="w-full h-full">
+              <circle cx="50%" cy="50%" r="45%" class="stroke-gray-300 fill-none" stroke-width="8"></circle>
+              <circle cx="50%" cy="50%" r="45%" class="stroke-green-500 fill-none" stroke-width="8" stroke-dasharray="282" stroke-dashoffset="282" data-percentage="90"></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-xs sm:text-sm font-semibold">Tailwind</span>
+              <span class="block text-sm sm:text-base">90%</span>
+            </div>
+          </div>
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto">
+            <svg class="w-full h-full">
+              <circle cx="50%" cy="50%" r="45%" class="stroke-gray-300 fill-none" stroke-width="8"></circle>
+              <circle cx="50%" cy="50%" r="45%" class="stroke-green-500 fill-none" stroke-width="8" stroke-dasharray="282" stroke-dashoffset="282" data-percentage="70"></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-xs sm:text-sm font-semibold">JavaScript</span>
+              <span class="block text-sm sm:text-base">70%</span>
+            </div>
+          </div>
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 mx-auto">
+            <svg class="w-full h-full">
+              <circle cx="50%" cy="50%" r="45%" class="stroke-gray-300 fill-none" stroke-width="8"></circle>
+              <circle cx="50%" cy="50%" r="45%" class="stroke-green-500 fill-none" stroke-width="8" stroke-dasharray="282" stroke-dashoffset="282" data-percentage="30"></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-xs sm:text-sm font-semibold">React</span>
+              <span class="block text-sm sm:text-base">30%</span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10">
+          <ul class="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/vscode.png" alt="VSCode" class="w-5 sm:w-7" />
+            </li>
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/figma.png" alt="Figma" class="w-5 sm:w-7" />
+            </li>
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/git.png" alt="Git" class="w-5 sm:w-7" />
+            </li>
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/tailwind-css-48.png" alt="Tailwind CSS" class="w-5 sm:w-7" />
+            </li>
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/blender-48.png" alt="Blender" class="w-5 sm:w-7" />
+            </li>
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/html-48.png" alt="HTML" class="w-5 sm:w-7" />
+            </li>
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/icons8-c-48.png" alt="C Programming" class="w-5 sm:w-7" />
+            </li>
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/icons8-js-48.png" alt="JavaScript" class="w-5 sm:w-7" />
+            </li>
+            <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-2 duration-500">
+              <img src="./images/icons8-react-80.png" alt="React" class="w-5 sm:w-7" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="Contact"
+      class="w-full items-center px-4 sm:px-8 lg:px-[16%] -scroll-mt-[-80px] bg-no-repeat bg-[length:90%_auto] bg-center mt-16"
+    >
+      <div class="flex flex-col gap-4">
+        <h2 class="text-center font-plus-jakarta text-3xl text-[#12D861]">
+          CONNECT WITH ME
+        </h2>
+        <p
+          class="textcolor text-lg lg:text-xl font-plus-jakarta text-center mt-5 mb-8 lg:mb-12"
+        >
+        I'm always thrilled to explore new ideas and projects. Whether you're looking to bring a vision to life, 
+        need a creative mind for your team, or simply want to chat about the latest trends in design and tech, 
+        I'm here to connect. Drop me a message below, and I'll get back to you as soon as I can. Always excited to hear from you!
+        </p>
+        <div
+          class="contact-form items-center justify-center mx-auto border-gray-400 bg-[#bfe0fb4e] px-4 sm:px-6 rounded-md mb-4 pb-6 text-black w-full max-w-4xl"
+        >
+          <form
+            method="POST"
+            action="https://api.web3forms.com/submit"
+            class="w-full"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="72c134e2-e6cf-427d-8457-515e2953f240"
+            />
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 lg:mt-10 mb-6 lg:mb-8">
+              <input
+                type="text"
+                placeholder="Enter your name"
+                class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white/90"
+                required
+                name="name"
+              />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white/90"
+                required
+                name="email"
+              />
+            </div>
+            <textarea
+              rows="6"
+              placeholder="Your thoughts?"
+              class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+              required
+              name="message"
+            ></textarea>
+            <button
+              class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500"
+            >
+              Submit
+              <img src="./images/right-arrow-dark.png" alt="" class="w-4" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="mt-16 lg:mt-20 textcolor px-4 sm:px-8">
+      <div class="text-center">
+        <div class="w-max flex items-center gap-2 mx-auto text-sm lg:text-base">
+          <i class="fa-solid fa-envelope fa-lg lg:fa-xl textcolor"></i>jaypandya428@gmail.com
+        </div>
+      </div>
+      <div
+        class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[5%] lg:mx-[10%] mt-8 lg:mt-12 py-6 text-sm lg:text-base"
+      >
+        <p>© 2024 Jay Pandya. All rights reserved.</p>
+      </div>
+    </div>
+
             <h3 class="textcolor">Bachelor of Engineering</h3>
             <p class="textcolor text-sm">Sardar Vallabhbhai Patel Institute of Technology (2022-2026)</p>
           </div>

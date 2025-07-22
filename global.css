@@ -26,7 +26,7 @@ body {
 .ml5 {
     position: relative;
     font-weight: 300;
-    font-size: 4.5em;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     color: #402d2d;
   }
   
@@ -66,7 +66,7 @@ body {
   }
 
   .ml13 {
-    font-size: 1.9em;
+    font-size: clamp(1.2rem, 3vw, 1.9rem);
     text-transform: uppercase;
     letter-spacing: 0.5em;
     font-weight: 600;
@@ -98,3 +98,51 @@ body {
   box-sizing: border-box; /* Ensure padding and borders are included in the element's total width and height */
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .mobile-menu-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+  
+  .hero-text {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+  }
+  
+  .hero-subtext {
+    font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+  }
+  
+  .project-card {
+    flex-direction: column !important;
+  }
+  
+  .project-image {
+    width: 100% !important;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+  
+  .contact-form {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: clamp(1.5rem, 7vw, 2.5rem) !important;
+  }
+  
+  .hero-subtext {
+    font-size: clamp(1.2rem, 5vw, 2rem) !important;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
